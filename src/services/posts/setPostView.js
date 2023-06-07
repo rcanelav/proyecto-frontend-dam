@@ -1,5 +1,6 @@
 import axios from "axios";
 
 export const setPostView = async(id) => {
-  await axios.put(`/api/v1/posts/${id}/view`);
+  const base = process.env.REACT_APP_API_URL;
+  await axios.put(`${base}/api/v1/posts/${id}/view`);
 };

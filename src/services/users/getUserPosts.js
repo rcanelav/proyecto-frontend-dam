@@ -1,5 +1,6 @@
 import axios from "axios";
 
 export const getUserPosts = async(id, page, limit) => {
-  return (await axios.get(`/api/v1/users/${id}/posts?page=${page}&limit=${limit}`)).data;
+  const base = process.env.REACT_APP_API_URL;
+  return (await axios.get(`${base}/api/v1/users/${id}/posts?page=${page}&limit=${limit}`)).data;
 };
