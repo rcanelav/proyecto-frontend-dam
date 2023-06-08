@@ -9,7 +9,7 @@ if [ ! -f ".env" ]; then
     # Append the env schema
     echo "Generating the .env file..."
     cat <<EOF >> .env
-PORT=3000
-REACT_APP_API_URL=http://localhost:3005
+PORT=3005
+REACT_APP_API_URL=http://localhost:3000
 EOF
 fi
